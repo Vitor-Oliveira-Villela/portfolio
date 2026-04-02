@@ -89,4 +89,23 @@ public class DbService {
             return false;
         }
     }
+
+    // Função para remover um cliente do sistema.
+    public static boolean removeClient(int id) {
+        String sql = "DELETE FROM clients WHERE id = ?";
+
+        try (Connection conn = DbConnection.getConnection();
+            PreparedStatement stmt = conn.prepareStatement(sql)) {
+
+            stmt.setInt(1, id);
+
+            stmt.executeUpdate();
+            
+            return true; 
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
 }

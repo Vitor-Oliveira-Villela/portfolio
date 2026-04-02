@@ -94,8 +94,17 @@ public class UserView {
 
             break;
 
-        case 3:
-            // Remover cliente
+        case 3: // Remover cliente.
+            System.out.println("------ Remover Cliente ------");
+            System.out.println("Insira o Id do cliente para remover:");
+            String id = sc.nextLine();
+
+            boolean successRemoveClient = DbService.removeClient(Integer.parseInt(id));
+            if (successRemoveClient) {
+                System.out.println("Cliente removido com sucesso!");
+            } else {
+                System.out.println("Não foi possivel remover o cliente, verifique se o Id está correto e tente novamente!");
+            }
             break;
 
         case 4:
