@@ -1,3 +1,7 @@
+![Java](https://img.shields.io/badge/Java-17-blue)
+![Maven](https://img.shields.io/badge/Maven-3.9.0-red)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)
+
 Client Manager - Sistema de Gerenciamento de Clientes (CRUD)
 
 Este projeto é um sistema CRUD desenvolvido em Java para gerenciamento de clientes, utilizando PostgreSQL como banco de dados e Maven para gerenciamento de dependências.
