@@ -63,6 +63,20 @@ public class UserView {
                         c.gender
                 );
             }
+            System.out.println("------ Opções ------");
+            System.out.println("1) Voltar");
+            System.out.println("2) Sair do sistema");
+            String responseClientList = sc.nextLine();
+
+            if (Integer.parseInt(responseClientList) == 1) {
+                mainScreen();
+            } else if (Integer.parseInt(responseClientList) == 2) {
+                System.out.println("Encerrando...");
+                System.exit(0);
+            } else {
+                System.out.println("Opção invalida! Voltando para tela inicial.");
+                mainScreen();
+            }
             break;
 
         case 2: // Adicionar novo cliente.
