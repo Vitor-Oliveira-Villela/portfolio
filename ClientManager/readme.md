@@ -1,6 +1,7 @@
-![Java](https://img.shields.io/badge/Java-17-blue)
-![Maven](https://img.shields.io/badge/Maven-3.9.0-red)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)
+![Java](https://img.shields.io/badge/Java-17-blue?style=flat-square)
+![Maven](https://img.shields.io/badge/Maven-3.9.0-red?style=flat-square)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 Client Manager - Sistema de Gerenciamento de Clientes (CRUD)
 
