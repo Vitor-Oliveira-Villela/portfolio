@@ -3,6 +3,7 @@ package com.clientmanager.view;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Scanner;
+import java.time.LocalDate;
 import com.clientmanager.database.DbService;
 import com.clientmanager.model.Client;
 
@@ -41,7 +42,7 @@ public class UserView {
         int response = Integer.parseInt(sc.nextLine());
 
         switch (response) {
-        case 1:
+        case 1: // Listar clientes cadastrados.
             List<Client> clients = DbService.clientList();
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
@@ -64,8 +65,33 @@ public class UserView {
             }
             break;
 
-        case 2:
-            // Adicionar cliente
+        case 2: // Adicionar novo cliente.
+            System.out.println("------ Adicionar Cliente ------");
+            System.out.println("Nome:");
+            String name = sc.nextLine();
+
+            System.out.println("Email:");
+            String email = sc.nextLine();
+
+            System.out.println("Telefone:");
+            String phone = sc.nextLine();
+
+            System.out.println("Data de Nascimento (aaaa-mm-dd):");
+            DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            String birth_date = sc.nextLine();
+            LocalDate birth = LocalDate.parse(birth_date, formatter1);
+
+            System.out.println("Sexo (M - Masculino, F - Feminino, O - Outro, P - Prefiro não informar):");
+            String gender = sc.nextLine();
+
+            boolean successAddClient = DbService.addClient(name, email, phone, birth, gender);
+
+            if (successAddClient) {
+                System.out.println("Cliente adicionado a lista com sucesso!");
+            } else {
+                System.out.println("Não foi possivel adicionar o cliente, por favor valide as informações e tente novamente!");
+            }
+
             break;
 
         case 3:
