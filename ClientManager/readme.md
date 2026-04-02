@@ -32,6 +32,18 @@ src/
                  └── UserView.java
              └── Main.java
 
+Configuração do Banco de Dados
+
+    Criar banco
+
+    Criar tabelas
+
+Configuração da Conexão
+
+Como Executar
+
+Exemplo de Uso
+
 Objetivo
 
 Praticar conceitos de CRUD, integração com banco de dados relacional e organização de projetos Java utilizando Maven.
